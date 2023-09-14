@@ -45,7 +45,7 @@ for Desktop and Mobile:
 
 
 ### Font and Colours
-I chose the RobotoSerif_Think.ttf font for the whole page to stay consistent for better user accessibility
+I chose the free 'RobotoSerif_UltraC' and 'RobotoSerif_Thin' for the whole page to stay consistent for better user accessibility. The fonts were downloaded from google fonts and are placed in the local folder "fonts".
 
 ## Features
 
@@ -75,7 +75,7 @@ The result is being displayed in the "result area" field. An invalid entry in th
 - [Balsamiq](https://balsamiq.com/) was used to pre-design the layout
 - [GitHub](https://github.com/) was used to host the deployed website
 - Screenshots were taken with [FireShot](https://chrome.google.com/webstore/detail/take-webpage-screenshots/mcbpblocgmgfnpjjppndjkmgjaogfceg)
-- [Gitpod]() was used
+- [Gitpod](https://www.gitpod.io/) was used as environment to write and develop the code 
 
 ## Languages used
 - [HTML5](https://en.wikipedia.org/wiki/HTML5)
@@ -100,7 +100,7 @@ The result is being displayed in the "result area" field. An invalid entry in th
 ## Deployment
 The steps to deploy are as follows: In the GitHub repository, navigate to the Settings tab From the source section drop-down menu, select the Main Branch. Once the main branch has been selected, the page will automatically refresh with a display to indicate the successful deployment.
 
-The live link can be found here https://mufasa1611.github.io/Project2-Converter/
+   The live link can be found here: [Measure Converter](https://mufasa1611.github.io/Project2-Converter)
 
 ### Local Depoloyment
 mention Gitpod
