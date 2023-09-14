@@ -1,6 +1,6 @@
 ![CI logo](img/matrex.gif)
 
-Welcome USER_NAME,
+Welcome 
 
 ## Index - Table of Contents
 
