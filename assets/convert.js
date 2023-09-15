@@ -15,3 +15,14 @@ document.addEventListener("DOMContentLoaded", function () {
         fromUnitSelect.innerHTML = '';
         toUnitSelect.innerHTML = '';
         const selectedUnit = unitSelect.value;
+
+        //Define units based on the selected unit system
+        let units = [];
+        switch (selectedUnit) {
+            case 'length':
+                units = ['Inches', 'Feet', 'Yards', 'Miles', 'Kilometers', 'Meters', 'Centimeters'];
+                break;
+        }
+
+    })
+});
