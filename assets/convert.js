@@ -36,5 +36,14 @@ document.addEventListener("DOMContentLoaded", function () {
             toUnitElement.value = unit;
             toUnitElement.textContent = unit;
             toUnitSelect.appendChild(toUnitElement);
-    })
+
+
+        });
+    });
+
+    //event listener for the "Convert" button
+    document.getElementById('convert-btn').addEventListener('click', function () {
+  
+    }
+    );
 });
