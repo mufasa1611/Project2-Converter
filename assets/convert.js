@@ -24,5 +24,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 break;
         }
 
+        //content of "From" select box
+        units.forEach(function (unit) {
+            const unitElement = document.createElement('option');
+            unitElement.value = unit;
+            unitElement.textContent = unit;
+            fromUnitSelect.appendChild(unitElement);
+
+            
     })
 });
