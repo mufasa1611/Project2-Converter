@@ -39,9 +39,16 @@
 .input-box {
   margin-bottom: 10px;
 }
+.input-control {
+  width: 95%;
+  padding: 10px;
+  border: 1px solid #f00909;
+  border-radius: 3px;
+}
 
 .label {
   display: block;
+  font-family: "RobotoSerif-Thin.ttf", "RobotoSerif_Thin", sans-serif;
   margin: 20px,0px;
   color: #161616;
 }
@@ -74,4 +81,10 @@ h4 {
   font-size: 24px;
   color: #2133ff;
   margin-top: 1px;
+}
+
+/* Style the header */
+h1 {
+  text-align: center;
+  color: #333;
 }
