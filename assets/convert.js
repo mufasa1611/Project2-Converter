@@ -43,7 +43,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //event listener for the "Convert" button
     document.getElementById('convert-btn').addEventListener('click', function () {
-  
+
+        //Retrieve units to convert from and to, and input value
+        const selectedUnit = unitSelect.value;
+        const fromUnit = fromUnitSelect.value;
+        const toUnit = toUnitSelect.value;
+        const inputValue = parseFloat(Input.value);
+        let convertedValue = inputValue;
+
     }
     );
 });
