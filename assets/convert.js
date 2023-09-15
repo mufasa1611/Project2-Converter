@@ -53,6 +53,11 @@ document.addEventListener("DOMContentLoaded", function () {
  
         // Display the result
         output.textContent = convertedValue;
-    }
-    );
+    });
+
+    //Define conversion functions for each unit
+    function Length(fromUnit, toUnit, value) {
+        
+     }
+
 });
