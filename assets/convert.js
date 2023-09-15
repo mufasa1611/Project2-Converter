@@ -6,3 +6,12 @@ let fromUnitSelect = document.getElementById('from-unit'); // The (from unit) dr
 let toUnitSelect = document.getElementById('to-unit'); // The (to unit) dropdown select
 const Input = document.getElementById('input'); // The input field where the user enters the value to be converted
 const output = document.getElementById('output'); // The output field where the result is displayed
+
+//  execute the document loaded
+document.addEventListener("DOMContentLoaded", function () {
+
+    // Add an event listener for the unit system selection
+    unitSelect.addEventListener('change', function () {
+        fromUnitSelect.innerHTML = '';
+        toUnitSelect.innerHTML = '';
+        const selectedUnit = unitSelect.value;
