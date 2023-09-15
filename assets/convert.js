@@ -50,7 +50,9 @@ document.addEventListener("DOMContentLoaded", function () {
         const toUnit = toUnitSelect.value;
         const inputValue = parseFloat(Input.value);
         let convertedValue = inputValue;
-
+ 
+        // Display the result
+        output.textContent = convertedValue;
     }
     );
 });
