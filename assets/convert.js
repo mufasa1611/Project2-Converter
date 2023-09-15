@@ -24,13 +24,17 @@ document.addEventListener("DOMContentLoaded", function () {
                 break;
         }
 
-        //content of "From" select box
+        //element of "From" select box
         units.forEach(function (unit) {
             const unitElement = document.createElement('option');
             unitElement.value = unit;
             unitElement.textContent = unit;
             fromUnitSelect.appendChild(unitElement);
 
-            
+            //element of "To" select box
+            const toUnitElement = document.createElement('option');
+            toUnitElement.value = unit;
+            toUnitElement.textContent = unit;
+            toUnitSelect.appendChild(toUnitElement);
     })
 });
