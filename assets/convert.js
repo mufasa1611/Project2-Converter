@@ -10,6 +10,11 @@ const output = document.getElementById('output'); // The output field where the 
 //  execute the document loaded
 document.addEventListener("DOMContentLoaded", function () {
 
+    // Define an array for measurement types
+    const measureType = [
+        {value: 'length', lable:'Length'},
+        { value: 'temp', label: 'Temperature' },
+    ]
     // Add an event listener for the unit system selection
     unitSelect.addEventListener('change', function () {
         fromUnitSelect.innerHTML = '';
@@ -241,7 +246,7 @@ function temp(fromUnit, toUnit, value) {
                 return (value - 32) * 5 / 9 + 273.15;
             }
             break;
-            
+
         // Conversions from Kelvin
         case 'Kelvin':
             if (toUnit === 'Fahrenheit') {
