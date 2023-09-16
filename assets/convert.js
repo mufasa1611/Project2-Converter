@@ -87,28 +87,48 @@ function Length(fromUnit, toUnit, value) {
             }
             break;
 
-            // Conversions from Feet
-            case 'Feet':
-                if (toUnit === 'Inches') {
-                    return value * 12;
-                }
-                else if (toUnit === 'Yards') {
-                    return value / 3;
-                }
-                else if (toUnit === 'Miles') {
-                    return value / 5280;
-                }
-                else if (toUnit === 'Kilometers') {
-                    return value / 3280.84;
-                }
-                else if (toUnit === 'Meters') {
-                    return value / 3.28084;
-                }
-                else if (toUnit === 'Centimeters') {
-                    return value * 30.48;
-                }
-                break;
-                
+        // Conversions from Feet
+        case 'Feet':
+            if (toUnit === 'Inches') {
+                return value * 12;
+            }
+            else if (toUnit === 'Yards') {
+                return value / 3;
+            }
+            else if (toUnit === 'Miles') {
+                return value / 5280;
+            }
+            else if (toUnit === 'Kilometers') {
+                return value / 3280.84;
+            }
+            else if (toUnit === 'Meters') {
+                return value / 3.28084;
+            }
+            else if (toUnit === 'Centimeters') {
+                return value * 30.48;
+            }
+            break;
+        // Conversions from Yards
+        case 'Yards':
+            if (toUnit === 'Inches') {
+                return value * 36;
+            }
+            else if (toUnit === 'Feet') {
+                return value * 3;
+            }
+            else if (toUnit === 'Miles') {
+                return value / 1760;
+            }
+            else if (toUnit === 'Kilometers') {
+                return value / 1093.61;
+            }
+            else if (toUnit === 'Meters') {
+                return value / 1.09361;
+            }
+            else if (toUnit === 'Centimeters') {
+                return value * 91.44;
+            }
+            break;
         default:
             return value;
     }
