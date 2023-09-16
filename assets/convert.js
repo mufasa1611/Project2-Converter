@@ -50,33 +50,44 @@ document.addEventListener("DOMContentLoaded", function () {
         const toUnit = toUnitSelect.value;
         const inputValue = parseFloat(Input.value);
         let convertedValue = inputValue;
- 
+
+
+        switch (selectedUnit) {
+            case 'length':
+                convertedValue = Length(fromUnit, toUnit, inputValue);
+                break;
+        }
         // Display the result
         output.textContent = convertedValue;
     });
-
-    //Define conversion functions for each unit
-    function Length(fromUnit, toUnit, value) {
-
-        // Conversions from Inches
-        if (fromUnit === 'Inches' && toUnit === 'Feet') {
-            return value / 12;
-        }
-        else if (fromUnit === 'Inches' && toUnit === 'Yards') {
-            return value / 36;
-        }
-        else if (fromUnit === 'Inches' && toUnit === 'Miles') {
-            return value / 63360;
-        }
-        else if (fromUnit === 'Inches' && toUnit === 'Kilometers') {
-            return value / 39370.1;
-        }
-        else if (fromUnit === 'Inches' && toUnit === 'Meters') {
-            return value / 39.3701;
-        }
-        else if (fromUnit === 'Inches' && toUnit === 'Centimeters') {
-            return value * 2.54;
-        }
-     }
-
 });
+        // Conversion function for length
+        function Length(fromUnit, toUnit, value) {
+
+    switch (fromUnit) {
+        // Conversions from Inches
+        case 'Inches':
+            if (fromUnit === 'Inches' && toUnit === 'Feet') {
+                return value / 12;
+            }
+            else if (fromUnit === 'Inches' && toUnit === 'Yards') {
+                return value / 36;
+            }
+            else if (fromUnit === 'Inches' && toUnit === 'Miles') {
+                return value / 63360;
+            }
+            else if (fromUnit === 'Inches' && toUnit === 'Kilometers') {
+                return value / 39370.1;
+            }
+            else if (fromUnit === 'Inches' && toUnit === 'Meters') {
+                return value / 39.3701;
+            }
+            else if (fromUnit === 'Inches' && toUnit === 'Centimeters') {
+                return value * 2.54;
+            }
+            break;
+        default:
+            return value;
+    }
+
+}
