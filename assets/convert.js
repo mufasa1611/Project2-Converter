@@ -71,6 +71,12 @@ document.addEventListener("DOMContentLoaded", function () {
         const inputValue = parseFloat(Input.value);
         let convertedValue = inputValue;
 
+        // Check if the input value is a valid number
+        if (isNaN(inputValue)) {
+            alert('Please enter a valid number.');
+            return;
+        }
+        
         switch (selectedUnit) {
             case 'length':
                 convertedValue = Length(fromUnit, toUnit, inputValue);
