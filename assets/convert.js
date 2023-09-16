@@ -130,7 +130,7 @@ function Length(fromUnit, toUnit, value) {
             }
             break;
 
-            // Conversions from Miles
+        // Conversions from Miles
         case 'Miles':
             if (toUnit === 'Inches') {
                 return value * 63360;
@@ -148,6 +148,28 @@ function Length(fromUnit, toUnit, value) {
                 return value / 0.00062137;
             } else if (toUnit === 'Centimeters') {
                 return value / 0.0000062137;
+            }
+            break;
+
+            // Conversions from Kilometers
+        case 'Kilometers':
+            if (toUnit === 'Inches') {
+                return value * 39370.1;
+            }
+            else if (toUnit === 'Feet') {
+                return value * 3280.84;
+            }
+            else if (toUnit === 'Yards') {
+                return value * 1093.61;
+            }
+            else if (toUnit === 'Miles') {
+                return value / 1.60934;
+            }
+            else if (toUnit === 'Meters') {
+                return value * 1000;
+            }
+            else if (toUnit === 'Centimeters') {
+                return value * 100000;
             }
             break;
         default:
