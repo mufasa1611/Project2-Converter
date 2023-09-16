@@ -61,8 +61,8 @@ document.addEventListener("DOMContentLoaded", function () {
         output.textContent = convertedValue;
     });
 });
-        // Conversion function for length
-        function Length(fromUnit, toUnit, value) {
+// Conversion function for length
+function Length(fromUnit, toUnit, value) {
 
     switch (fromUnit) {
         // Conversions from Inches
@@ -86,6 +86,29 @@ document.addEventListener("DOMContentLoaded", function () {
                 return value * 2.54;
             }
             break;
+
+            // Conversions from Feet
+            case 'Feet':
+                if (toUnit === 'Inches') {
+                    return value * 12;
+                }
+                else if (toUnit === 'Yards') {
+                    return value / 3;
+                }
+                else if (toUnit === 'Miles') {
+                    return value / 5280;
+                }
+                else if (toUnit === 'Kilometers') {
+                    return value / 3280.84;
+                }
+                else if (toUnit === 'Meters') {
+                    return value / 3.28084;
+                }
+                else if (toUnit === 'Centimeters') {
+                    return value * 30.48;
+                }
+                break;
+                
         default:
             return value;
     }
