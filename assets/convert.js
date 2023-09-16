@@ -19,8 +19,14 @@ document.addEventListener("DOMContentLoaded", function () {
         //Define units based on the selected unit system
         let units = [];
         switch (selectedUnit) {
+            // based of length
             case 'length':
                 units = ['Inches', 'Feet', 'Yards', 'Miles', 'Kilometers', 'Meters', 'Centimeters'];
+                break;
+
+            // based of temp
+            case 'temp':
+                units = ['Fahrenheit', 'Celsius', 'Kelvin'];
                 break;
         }
 
@@ -51,11 +57,15 @@ document.addEventListener("DOMContentLoaded", function () {
         const inputValue = parseFloat(Input.value);
         let convertedValue = inputValue;
 
-
         switch (selectedUnit) {
             case 'length':
                 convertedValue = Length(fromUnit, toUnit, inputValue);
                 break;
+
+           case 'temp':
+                convertedValue = temp(fromUnit, toUnit, inputValue);
+                break;
+
         }
         // Display the result
         output.textContent = convertedValue;
@@ -151,7 +161,7 @@ function Length(fromUnit, toUnit, value) {
             }
             break;
 
-            // Conversions from Kilometers
+        // Conversions from Kilometers
         case 'Kilometers':
             if (toUnit === 'Inches') {
                 return value * 39370.1;
@@ -173,7 +183,7 @@ function Length(fromUnit, toUnit, value) {
             }
             break;
 
-            // Conversions from Meters
+        // Conversions from Meters
         case 'Meters':
             if (toUnit === 'Inches') {
                 return value * 39.3701;
@@ -195,7 +205,7 @@ function Length(fromUnit, toUnit, value) {
             }
             break;
 
-            // Conversions from Centimeters
+        // Conversions from Centimeters
         case 'Centimeters':
             if (toUnit === 'Inches') {
                 return value / 2.54;
