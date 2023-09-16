@@ -16,14 +16,14 @@ document.addEventListener("DOMContentLoaded", function () {
         { value: 'temp', label: 'Temperature' },
     ];
 
-// establish the selected measurement element 
+    // establish the selected measurement element 
     measureType.forEach(function (measurement) {
         const optionElement = document.createElement('option');
         optionElement.value = measurement.value;
         optionElement.textContent = measurement.label;
         unitSelect.appendChild(optionElement);
     });
-    
+
     // Add an event listener for the unit system selection
     unitSelect.addEventListener('change', function () {
         fromUnitSelect.innerHTML = '';
@@ -89,6 +89,13 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         // Display the result
         output.textContent = convertedValue.toFixed(4); //<---Rounded to 4 decimal
+    });
+    
+    // Add Enter key press in the input field
+    Input.addEventListener("keyup", function (event) {
+        if (event.key === "Enter") {
+            document.getElementById("convert-btn").click();
+        }
     });
 });
 // Conversion function for length
@@ -271,17 +278,18 @@ function temp(fromUnit, toUnit, value) {
             }
             break;
 
-            // Conversions from Celsius
-            case 'Celsius':
-                if (toUnit === 'Fahrenheit') {
-                    return (value * 9 / 5) + 32;
-                } else if (toUnit === 'Kelvin') {
-                    return value + 273.15;
-                }
-                break;
+        // Conversions from Celsius
+        case 'Celsius':
+            if (toUnit === 'Fahrenheit') {
+                return (value * 9 / 5) + 32;
+            } else if (toUnit === 'Kelvin') {
+                return value + 273.15;
+            }
+            break;
         default:
-
     }
+
+
     return value;
 }
 
