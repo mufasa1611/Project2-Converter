@@ -172,6 +172,28 @@ function Length(fromUnit, toUnit, value) {
                 return value * 100000;
             }
             break;
+
+            // Conversions from Meters
+        case 'Meters':
+            if (toUnit === 'Inches') {
+                return value * 39.3701;
+            }
+            else if (toUnit === 'Feet') {
+                return value * 3.28084;
+            }
+            else if (toUnit === 'Yards') {
+                return value * 1.09361;
+            }
+            else if (toUnit === 'Miles') {
+                return value / 1609.34;
+            }
+            else if (toUnit === 'Kilometers') {
+                return value / 1000;
+            }
+            else if (toUnit === 'Centimeters') {
+                return value * 100;
+            }
+            break;
         default:
             return value;
     }
