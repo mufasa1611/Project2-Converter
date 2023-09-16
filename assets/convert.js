@@ -67,22 +67,22 @@ document.addEventListener("DOMContentLoaded", function () {
     switch (fromUnit) {
         // Conversions from Inches
         case 'Inches':
-            if (fromUnit === 'Inches' && toUnit === 'Feet') {
+            if (toUnit === 'Feet') {
                 return value / 12;
             }
-            else if (fromUnit === 'Inches' && toUnit === 'Yards') {
+            else if (toUnit === 'Yards') {
                 return value / 36;
             }
-            else if (fromUnit === 'Inches' && toUnit === 'Miles') {
+            else if (toUnit === 'Miles') {
                 return value / 63360;
             }
-            else if (fromUnit === 'Inches' && toUnit === 'Kilometers') {
+            else if (toUnit === 'Kilometers') {
                 return value / 39370.1;
             }
-            else if (fromUnit === 'Inches' && toUnit === 'Meters') {
+            else if (toUnit === 'Meters') {
                 return value / 39.3701;
             }
-            else if (fromUnit === 'Inches' && toUnit === 'Centimeters') {
+            else if (toUnit === 'Centimeters') {
                 return value * 2.54;
             }
             break;
