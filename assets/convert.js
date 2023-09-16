@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Display the result
         output.textContent = convertedValue.toFixed(4); //<---Rounded to 4 decimal
     });
-    
+
     // Add Enter key press in the input field
     Input.addEventListener("keyup", function (event) {
         if (event.key === "Enter") {
@@ -98,6 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
 // Conversion function for length
 function Length(fromUnit, toUnit, value) {
 
