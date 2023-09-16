@@ -60,13 +60,20 @@ label {
   padding: 10px;
   background-color: #007bff;
   color: #fff;
-  border: none;
+  border:#161616;
   border-radius: 3px;
   cursor: pointer;
 }
 
 .btn:hover {
   background-color: #2200ff;
+}
+
+/* Style the header */
+h1 {
+  text-align: center;
+  padding-bottom: 30px;
+  color: #333;
 }
 
 /* Style the output result */
@@ -83,8 +90,11 @@ h4 {
   margin-top: 1px;
 }
 
-/* Style the header */
-h1 {
-  text-align: center;
-  color: #333;
+/*classes for hiding and showing elements */
+.hidden {
+  display: none;
+}
+
+.shown {
+  display: block;
 }

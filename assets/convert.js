@@ -10,6 +10,10 @@ const output = document.getElementById('output'); // The output field where the 
 //  execute the document loaded
 document.addEventListener("DOMContentLoaded", function () {
 
+    // hide the elements at start
+    fromUnitGroup.classList.add('hidden');
+    toUnitGroup.classList.add('hidden');
+    Input.classList.add('hidden');
     // Define an array for measurement types
     const measureType = [
         { value: 'length', label: 'Length' },
@@ -26,6 +30,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Add an event listener for the unit system selection
     unitSelect.addEventListener('change', function () {
+
+        // hide the elements at start
+        fromUnitGroup.classList.remove('hidden');
+        toUnitGroup.classList.remove('hidden');
+        Input.classList.remove('hidden');
         fromUnitSelect.innerHTML = '';
         toUnitSelect.innerHTML = '';
         const selectedUnit = unitSelect.value;
