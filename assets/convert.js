@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
             alert('Please enter a valid number.');
             return;
         }
-        
+
         switch (selectedUnit) {
             case 'length':
                 convertedValue = Length(fromUnit, toUnit, inputValue);
@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         }
         // Display the result
-        output.textContent = convertedValue;
+        output.textContent = convertedValue.toFixed(4); //<---Rounded to 4 decimal
     });
 });
 // Conversion function for length
