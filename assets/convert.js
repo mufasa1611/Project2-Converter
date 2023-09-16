@@ -4,7 +4,7 @@ let fromUnitGroup = document.getElementById('from-unit-box');  // group element 
 let toUnitGroup = document.getElementById('to-unit-box');  // group element that contains the (to units) dropdown list
 let fromUnitSelect = document.getElementById('from-unit'); // The (from unit) dropdown select 
 let toUnitSelect = document.getElementById('to-unit'); // The (to unit) dropdown select
-const Input = document.getElementById('input'); // The input field where the user enters the value to be converted
+const Input = document.getElementById('Input'); // The input field where the user enters the value to be converted
 const output = document.getElementById('output'); // The output field where the result is displayed
 
 //  execute the document loaded
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 convertedValue = Length(fromUnit, toUnit, inputValue);
                 break;
 
-           case 'temp':
+            case 'temp':
                 convertedValue = temp(fromUnit, toUnit, inputValue);
                 break;
 
@@ -226,8 +226,42 @@ function Length(fromUnit, toUnit, value) {
                 return value / 100;
             }
             break;
-        default:
             return value;
     }
-
 }
+// Function for temperature conversions
+function temp(fromUnit, toUnit, value) {
+    switch (fromUnit) {
+
+        // Conversions from Fahrenheit
+        case 'Fahrenheit':
+            if (toUnit === 'Celsius') {
+                return (value - 32) * 5 / 9;
+            } else if (toUnit === 'Kelvin') {
+                return (value - 32) * 5 / 9 + 273.15;
+            }
+            break;
+            
+        // Conversions from Kelvin
+        case 'Kelvin':
+            if (toUnit === 'Fahrenheit') {
+                return (value - 273.15) * 9 / 5 + 32;
+            } else if (toUnit === 'Celsius') {
+                return value - 273.15;
+            }
+            break;
+
+            // Conversions from Celsius
+            case 'Celsius':
+                if (toUnit === 'Fahrenheit') {
+                    return (value * 9 / 5) + 32;
+                } else if (toUnit === 'Kelvin') {
+                    return value + 273.15;
+                }
+                break;
+        default:
+
+    }
+    return value;
+}
+
