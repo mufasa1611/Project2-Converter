@@ -12,9 +12,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Define an array for measurement types
     const measureType = [
-        {value: 'length', lable:'Length'},
+        { value: 'length', label: 'Length' },
         { value: 'temp', label: 'Temperature' },
-    ]
+    ];
+
+// establish the selected measurement element 
+    measureType.forEach(function (measurement) {
+        const optionElement = document.createElement('option');
+        optionElement.value = measurement.value;
+        optionElement.textContent = measurement.label;
+        unitSelect.appendChild(optionElement);
+    });
+    
     // Add an event listener for the unit system selection
     unitSelect.addEventListener('change', function () {
         fromUnitSelect.innerHTML = '';
