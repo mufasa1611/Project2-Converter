@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     toUnitGroup.classList.add('hidden');
     Input.classList.add('hidden');
     convertBtn.classList.add('hidden');
-    
+
 
     // Define an array for measurement types
     const measureType = [
@@ -95,21 +95,28 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
+        let units;
+
         switch (selectedUnit) {
             case 'length':
                 convertedValue = Length(fromUnit, toUnit, inputValue);
+                units = Length(fromUnit, toUnit, 1);
                 break;
 
             case 'temp':
+                units = temp(fromUnit, toUnit, 1);
                 convertedValue = temp(fromUnit, toUnit, inputValue);
                 break;
-
         }
 
-        
-        // Display the result
+        // show the result container
+        outputContainer.classList.remove('hidden');
+
+        //Display the formula
         const Info = `1 ${fromUnit} equals ${units.toFixed(6)} ${toUnit}`
         document.getElementById('Info').textContent = Info;
+
+        // Display the Converted Value
         output.textContent = convertedValue.toFixed(4); //<---Rounded to 4 decimal
     });
 
