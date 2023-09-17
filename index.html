@@ -42,7 +42,7 @@
 
         <!-- input field -->
         <div class="input-box">
-            <label for="input">Enter Value:</label>
+            <label for="input" class="hidden">Enter Value:</label>
             <input type="number" class="input-control" id="Input">
     </div>
 
@@ -51,10 +51,17 @@
     </div>
 
     <!-- Result container -->
-    <div class="container">
-        <h4>Converted Value:</h4>
-        <p id="output"></p>
-    </div>
+    <div class="container hidden" id="output-container">
+        <div class="input-box">
+            <p id="Info"></p>
+
+            <div class="input-box" id="output-box">
+
+                <h4>Converted Value:</h4>
+                <p id="output"> </p>
+                <p id="output-unit" class="instructions"></p>
+            </div>
+        </div>
     <script src="assets/convert.js"></script>
 </body>
 

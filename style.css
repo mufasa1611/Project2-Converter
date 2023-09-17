@@ -98,3 +98,14 @@ h4 {
 .shown {
   display: block;
 }
+
+.instructions{
+  text-align: center;
+  color:#f00909;
+  font-size: 12px;
+} 
+#Info {
+  text-align: center;
+  color:#2c7bfb;
+  font-size: 14px;
+}

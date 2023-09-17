@@ -6,6 +6,9 @@ let fromUnitSelect = document.getElementById('from-unit'); // The (from unit) dr
 let toUnitSelect = document.getElementById('to-unit'); // The (to unit) dropdown select
 const Input = document.getElementById('Input'); // The input field where the user enters the value to be converted
 const output = document.getElementById('output'); // The output field where the result is displayed
+const outputContainer = document.getElementById('output-container')
+const convertBtn = document.getElementById('convert-btn');
+const valueLabel = document.querySelector('label[for="Input"]');
 
 //  execute the document loaded
 document.addEventListener("DOMContentLoaded", function () {
@@ -14,6 +17,9 @@ document.addEventListener("DOMContentLoaded", function () {
     fromUnitGroup.classList.add('hidden');
     toUnitGroup.classList.add('hidden');
     Input.classList.add('hidden');
+    convertBtn.classList.add('hidden');
+    
+
     // Define an array for measurement types
     const measureType = [
         { value: 'length', label: 'Length' },
@@ -31,12 +37,15 @@ document.addEventListener("DOMContentLoaded", function () {
     // Add an event listener for the unit system selection
     unitSelect.addEventListener('change', function () {
 
-        // hide the elements at start
+        // show the elements at start
+        document.querySelector('label[for="input"]').classList.remove('hidden');
         fromUnitGroup.classList.remove('hidden');
         toUnitGroup.classList.remove('hidden');
         Input.classList.remove('hidden');
+        convertBtn.classList.remove('hidden');
         fromUnitSelect.innerHTML = '';
         toUnitSelect.innerHTML = '';
+
         const selectedUnit = unitSelect.value;
 
         //Define units based on the selected unit system
@@ -96,7 +105,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 break;
 
         }
+
+        
         // Display the result
+        const Info = `1 ${fromUnit} equals ${units.toFixed(6)} ${toUnit}`
+        document.getElementById('Info').textContent = Info;
         output.textContent = convertedValue.toFixed(4); //<---Rounded to 4 decimal
     });
 
