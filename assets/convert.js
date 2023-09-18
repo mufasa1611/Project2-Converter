@@ -99,8 +99,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         switch (selectedUnit) {
             case 'length':
-                convertedValue = Length(fromUnit, toUnit, inputValue);
                 units = Length(fromUnit, toUnit, 1);
+                convertedValue = Length(fromUnit, toUnit, inputValue);
                 break;
 
             case 'temp':
@@ -112,12 +112,21 @@ document.addEventListener("DOMContentLoaded", function () {
         // show the result container
         outputContainer.classList.remove('hidden');
 
+
         //Display the formula
         const Info = `1 ${fromUnit} equals ${units.toFixed(6)} ${toUnit}`
         document.getElementById('Info').textContent = Info;
 
-        // Display the Converted Value
-        output.textContent = convertedValue.toFixed(4); //<---Rounded to 4 decimal
+        // Check if the converted value has decimal
+        const decimalCount = Number.isInteger(convertedValue) === false;
+
+        // Display the result accordingly
+        if (decimalCount) {
+            // Display the Converted Value
+            output.textContent = convertedValue.toFixed(3); //<---Rounded to 3 decimal
+        } else {
+            output.textContent = convertedValue; // Display as an integer
+        }
     });
 
     // Add Enter key press in the input field
@@ -136,20 +145,15 @@ function Length(fromUnit, toUnit, value) {
         case 'Inches':
             if (toUnit === 'Feet') {
                 return value / 12;
-            }
-            else if (toUnit === 'Yards') {
+            } else if (toUnit === 'Yards') {
                 return value / 36;
-            }
-            else if (toUnit === 'Miles') {
+            } else if (toUnit === 'Miles') {
                 return value / 63360;
-            }
-            else if (toUnit === 'Kilometers') {
+            } else if (toUnit === 'Kilometers') {
                 return value / 39370.1;
-            }
-            else if (toUnit === 'Meters') {
+            } else if (toUnit === 'Meters') {
                 return value / 39.3701;
-            }
-            else if (toUnit === 'Centimeters') {
+            } else if (toUnit === 'Centimeters') {
                 return value * 2.54;
             }
             break;
@@ -158,20 +162,15 @@ function Length(fromUnit, toUnit, value) {
         case 'Feet':
             if (toUnit === 'Inches') {
                 return value * 12;
-            }
-            else if (toUnit === 'Yards') {
+            } else if (toUnit === 'Yards') {
                 return value / 3;
-            }
-            else if (toUnit === 'Miles') {
+            } else if (toUnit === 'Miles') {
                 return value / 5280;
-            }
-            else if (toUnit === 'Kilometers') {
+            } else if (toUnit === 'Kilometers') {
                 return value / 3280.84;
-            }
-            else if (toUnit === 'Meters') {
+            } else if (toUnit === 'Meters') {
                 return value / 3.28084;
-            }
-            else if (toUnit === 'Centimeters') {
+            } else if (toUnit === 'Centimeters') {
                 return value * 30.48;
             }
             break;
@@ -179,20 +178,15 @@ function Length(fromUnit, toUnit, value) {
         case 'Yards':
             if (toUnit === 'Inches') {
                 return value * 36;
-            }
-            else if (toUnit === 'Feet') {
+            } else if (toUnit === 'Feet') {
                 return value * 3;
-            }
-            else if (toUnit === 'Miles') {
+            } else if (toUnit === 'Miles') {
                 return value / 1760;
-            }
-            else if (toUnit === 'Kilometers') {
+            } else if (toUnit === 'Kilometers') {
                 return value / 1093.61;
-            }
-            else if (toUnit === 'Meters') {
+            } else if (toUnit === 'Meters') {
                 return value / 1.09361;
-            }
-            else if (toUnit === 'Centimeters') {
+            } else if (toUnit === 'Centimeters') {
                 return value * 91.44;
             }
             break;
@@ -201,17 +195,13 @@ function Length(fromUnit, toUnit, value) {
         case 'Miles':
             if (toUnit === 'Inches') {
                 return value * 63360;
-            }
-            else if (toUnit === 'Feet') {
+            } else if (toUnit === 'Feet') {
                 return value * 5280;
-            }
-            else if (toUnit === 'Yards') {
+            } else if (toUnit === 'Yards') {
                 return value * 1760;
-            }
-            else if (toUnit === 'Kilometers') {
+            } else if (toUnit === 'Kilometers') {
                 return value / 0.621371;
-            }
-            else if (toUnit === 'Meters') {
+            } else if (toUnit === 'Meters') {
                 return value / 0.00062137;
             } else if (toUnit === 'Centimeters') {
                 return value / 0.0000062137;
@@ -222,20 +212,15 @@ function Length(fromUnit, toUnit, value) {
         case 'Kilometers':
             if (toUnit === 'Inches') {
                 return value * 39370.1;
-            }
-            else if (toUnit === 'Feet') {
+            } else if (toUnit === 'Feet') {
                 return value * 3280.84;
-            }
-            else if (toUnit === 'Yards') {
+            } else if (toUnit === 'Yards') {
                 return value * 1093.61;
-            }
-            else if (toUnit === 'Miles') {
+            } else if (toUnit === 'Miles') {
                 return value / 1.60934;
-            }
-            else if (toUnit === 'Meters') {
+            } else if (toUnit === 'Meters') {
                 return value * 1000;
-            }
-            else if (toUnit === 'Centimeters') {
+            } else if (toUnit === 'Centimeters') {
                 return value * 100000;
             }
             break;
@@ -244,47 +229,37 @@ function Length(fromUnit, toUnit, value) {
         case 'Meters':
             if (toUnit === 'Inches') {
                 return value * 39.3701;
-            }
-            else if (toUnit === 'Feet') {
+            } else if (toUnit === 'Feet') {
                 return value * 3.28084;
-            }
-            else if (toUnit === 'Yards') {
+            } else if (toUnit === 'Yards') {
                 return value * 1.09361;
-            }
-            else if (toUnit === 'Miles') {
+            } else if (toUnit === 'Miles') {
                 return value / 1609.34;
-            }
-            else if (toUnit === 'Kilometers') {
+            } else if (toUnit === 'Kilometers') {
                 return value / 1000;
-            }
-            else if (toUnit === 'Centimeters') {
+            } else if (toUnit === 'Centimeters') {
                 return value * 100;
-            }
-            break;
+            } break;
 
         // Conversions from Centimeters
         case 'Centimeters':
             if (toUnit === 'Inches') {
                 return value / 2.54;
-            }
-            else if (toUnit === 'Feet') {
+            } else if (toUnit === 'Feet') {
                 return value / 30.48;
-            }
-            else if (toUnit === 'Yards') {
+            } else if (toUnit === 'Yards') {
                 return value / 91.44;
-            }
-            else if (toUnit === 'Miles') {
+            } else if (toUnit === 'Miles') {
                 return value / 160934;
-            }
-            else if (toUnit === 'Kilometers') {
+            } else if (toUnit === 'Kilometers') {
                 return value / 100000;
-            }
-            else if (toUnit === 'Meters') {
+            } else if (toUnit === 'Meters') {
                 return value / 100;
             }
             break;
-            return value;
+        default:
     }
+    return value;
 }
 // Function for temperature conversions
 function temp(fromUnit, toUnit, value) {
