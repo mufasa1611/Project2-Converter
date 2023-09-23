@@ -6,12 +6,12 @@
 
 @font-face {
   font-family: 'RobotoSerif_UltraC';
-  src: url('assets/fonts/RobotoSerif_UltraC.ttf');
+  src: url('/assets/fonts/RobotoSerif_UltraC.ttf');
 }
 
 @font-face {
   font-family: 'RobotoSerif_Thin';
-  src: url('assets/fonts/RobotoSerif_Thin.ttf');
+  src: url('/assets/fonts/RobotoSerif_Thin.ttf');
 
 }
 

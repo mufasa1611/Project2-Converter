@@ -1,14 +1,14 @@
 //  defined variables
-let unitSelect = document.getElementById('unit-sys'); //   element that contains the unit system dropdown list
-let fromUnitGroup = document.getElementById('from-unit-box');  // group element that contains the (from units) dropdown list
-let toUnitGroup = document.getElementById('to-unit-box');  // group element that contains the (to units) dropdown list
-let fromUnitSelect = document.getElementById('from-unit'); // The (from unit) dropdown select 
-let toUnitSelect = document.getElementById('to-unit'); // The (to unit) dropdown select
+const unitSelect = document.getElementById('unit-sys'); //   element that contains the unit system dropdown list
+const fromUnitGroup = document.getElementById('from-unit-box');  // group element that contains the (from units) dropdown list
+const toUnitGroup = document.getElementById('to-unit-box');  // group element that contains the (to units) dropdown list
+const fromUnitSelect = document.getElementById('from-unit'); // The (from unit) dropdown select 
+const toUnitSelect = document.getElementById('to-unit'); // The (to unit) dropdown select
 const Input = document.getElementById('Input'); // The input field where the user enters the value to be converted
 const output = document.getElementById('output'); // The output field where the result is displayed
 const outputContainer = document.getElementById('output-container')
 const convertBtn = document.getElementById('convert-btn');
-const valueLabel = document.querySelector('label[for="Input"]');
+const decimalPlacesSelect = document.getElementById('decimal-places');
 
 //  execute the document loaded
 document.addEventListener("DOMContentLoaded", function () {
@@ -87,11 +87,12 @@ document.addEventListener("DOMContentLoaded", function () {
         const fromUnit = fromUnitSelect.value;
         const toUnit = toUnitSelect.value;
         const inputValue = parseFloat(Input.value);
+        const decimalPlaces = parseInt(decimalPlacesSelect.value);
         let convertedValue = inputValue;
 
         // Check if the input value is a valid number
         if (isNaN(inputValue)) {
-            alert('Please enter a valid number.');
+            alert('Please enter decimal number.');
             return;
         }
 
@@ -113,19 +114,16 @@ document.addEventListener("DOMContentLoaded", function () {
         outputContainer.classList.remove('hidden');
 
 
-        //Display the formula
-        const Info = `1 ${fromUnit} equals ${units.toFixed(6)} ${toUnit}`
+        // Display the formula
+        const Info = `1 ${fromUnit} equals ${units.toFixed(6)} ${toUnit}`;
         document.getElementById('Info').textContent = Info;
 
-        // Check if the converted value has decimal
+        // Round the converted value based on the selected decimal count
         const decimalCount = Number.isInteger(convertedValue) === false;
-
-        // Display the result accordingly
         if (decimalCount) {
-            // Display the Converted Value
-            output.textContent = convertedValue.toFixed(3); //<---Rounded to 3 decimal
+            output.textContent = convertedValue.toFixed(decimalPlaces); // Rounded to the selected decimal places
         } else {
-            output.textContent = convertedValue; // Display as an integer
+            output.textContent = convertedValue.toString(); // Display as an integer
         }
     });
 
@@ -135,11 +133,18 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("convert-btn").click();
         }
     });
+
+    // Populate the "Decimal Places" select element
+    for (let i = 1; i <= 9; i++) {
+        const optionElement = document.createElement('option');
+        optionElement.value = i;
+        optionElement.textContent = i;
+        decimalPlacesSelect.appendChild(optionElement);
+    }
 });
 
 // Conversion function for length
 function Length(fromUnit, toUnit, value) {
-
     switch (fromUnit) {
         // Conversions from Inches
         case 'Inches':
@@ -174,6 +179,7 @@ function Length(fromUnit, toUnit, value) {
                 return value * 30.48;
             }
             break;
+
         // Conversions from Yards
         case 'Yards':
             if (toUnit === 'Inches') {
@@ -239,7 +245,8 @@ function Length(fromUnit, toUnit, value) {
                 return value / 1000;
             } else if (toUnit === 'Centimeters') {
                 return value * 100;
-            } break;
+            }
+            break;
 
         // Conversions from Centimeters
         case 'Centimeters':
@@ -261,10 +268,10 @@ function Length(fromUnit, toUnit, value) {
     }
     return value;
 }
+
 // Function for temperature conversions
 function temp(fromUnit, toUnit, value) {
     switch (fromUnit) {
-
         // Conversions from Fahrenheit
         case 'Fahrenheit':
             if (toUnit === 'Celsius') {
@@ -293,8 +300,6 @@ function temp(fromUnit, toUnit, value) {
             break;
         default:
     }
-
-
     return value;
 }
 
