@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
     unitSelect.addEventListener('change', function () {
 
         // show the elements at start
-        document.querySelector('label[for="input"]').classList.remove('hidden');
+        document.querySelector('label[for="Input"]').classList.remove('hidden');
         fromUnitGroup.classList.remove('hidden');
         toUnitGroup.classList.remove('hidden');
         Input.classList.remove('hidden');
