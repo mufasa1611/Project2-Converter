@@ -96,6 +96,12 @@ h4 {
   color: #2133ff;
   margin-top: 0;
 }
+#decimal {
+  text-align: center;
+  font-size: 24px;
+  color: #2133ff;
+  margin-top: 0;
+}
 
 /*classes for hiding and showing elements */
 .hidden {
