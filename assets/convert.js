@@ -9,6 +9,30 @@ const output = document.getElementById('output'); // The output field where the 
 const outputContainer = document.getElementById('output-container')
 const convertBtn = document.getElementById('convert-btn');
 const decimalPlacesSelect = document.getElementById('decimal-places');
+const colorToggle = document.getElementById('color-toggle');
+const containers = document.querySelectorAll('.container');
+
+// Function to toggle color scheme
+colorToggle.addEventListener('click', function () {
+    // Get current color scheme from data attribute
+    const currentColorScheme = document.documentElement.getAttribute('data-color-scheme');
+    // Determine new color scheme
+    const newColorScheme = currentColorScheme === 'dark' ? 'light' : 'dark';
+    // Update data attribute with new color scheme
+    document.documentElement.setAttribute('data-color-scheme', newColorScheme);
+    // Apply new color scheme to containers
+    applyColorSchemeToContainers(newColorScheme);
+});
+
+// Function to apply color scheme to containers
+function applyColorSchemeToContainers(colorScheme) {
+    // Loop through containers
+    containers.forEach(function (container) {
+        // Set color scheme attribute
+        container.setAttribute('data-color-scheme', colorScheme);
+    });
+}
+
 
 //  execute the document loaded
 document.addEventListener("DOMContentLoaded", function () {

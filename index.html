@@ -5,21 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Measurement, Conversion, online convert, measure, online conversion tool">
+    <meta name="description" content="A useful tool for unit conversion. Convert various units quickly and easily.">
     <link rel="stylesheet" href="assets/style.css">
-    <title>Measurement Conversion</title>
+    <title>Units Converter Tool</title>
 </head>
 
 <body>
     <div class="container">
         <h1>Units Converter Tool</h1>
-               <div class="input-box">
+        <div class="input-box">
             <label for="unit-sys">Select Unit System:</label>
 
             <!-- Add unit system select dropdown -->
             <select class="input-control" id="unit-sys">
                 <option value="">Select Measurement</option>
-                </select>
-                <p class="instructions">Please select a unit system.</p>
+            </select>
+            <p class="instructions">Please select a unit system.</p>
         </div>
 
         <!-- from unit select dropdown -->
@@ -44,10 +45,10 @@
         <div class="input-box">
             <label for="input" class="hidden">Enter Value:</label>
             <input type="number" class="input-control" id="Input">
-    </div>
+        </div>
 
-    <!-- Convert Button -->
-    <button type="button" class="btn" id="convert-btn">Convert</button>
+        <!-- Convert Button -->
+        <button type="button" class="btn" id="convert-btn">Convert</button>
     </div>
 
     <!-- Result container -->
@@ -61,16 +62,18 @@
                 <p id="output"> </p>
                 <p id="output-unit" class="instructions"></p>
 
-                <div id="output"> 
-                    <label for="decimal-places" >Decimal Count:</label>
-                    <select id="decimal-places" >
+                <div id="output">
+                    <label for="decimal-places">Decimal Count:</label>
+                    <select id="decimal-places">
                     </select>
                     <p class="instructions">select how many decimal and reconvert</p>
-                    
+
                 </div>
             </div>
-        </div>
-    <script src="assets/convert.js"></script>
+        </div></div>
+
+        <button id="color-toggle">Toggle Color Scheme</button>
+        <script src="assets/convert.js"></script>
 </body>
 
 </html>
