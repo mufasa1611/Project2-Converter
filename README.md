@@ -1,7 +1,7 @@
 
-Welcome to my online Measure Units Conversion Tool!
+# Welcome to my online Units Converter Tool!
 
-![Mockup]()
+![Mockup](assets/pic/mockup.png)
 
 You can find the live website [here](https://mufasa1611.github.io/Project2-Converter/)
 
@@ -44,32 +44,46 @@ for Desktop and Mobile:
 ![](assets/pic/Converter-Mobile.png)
 
 
-### Font and Colours
-I chose the free 'RobotoSerif_UltraC' and 'RobotoSerif_Thin' for the whole page to stay consistent for better user accessibility. The fonts were downloaded from google fonts and are placed in the local folder "fonts".
+### Fonts and Colours
+- I chose the free 'RobotoSerif_UltraC' and 'RobotoSerif_Thin' for the whole page to stay consistent for better user accessibility. The fonts were downloaded from google fonts and are placed in the local folder "fonts".
+
+- The colors were chosen considering good contrasts for better readabiliy
 
 ## Features
 
 ### Existing Features
- - in the instructions, the user is asked to select the following from drop-down boxes:
-   - the desired converter
-   - the unit to convert from
-   - the unit to convert to 
 
- - to enter a numeral value in the "enter value" field
- - to press the convert button
+- When entering the site, the user can see a box with the title "Units Converter Tool" with a drop down box from which he is asked to select a unit system. 
 
-The result is being displayed in the "result area" field. An invalid entry in the "enter value" field will display a pop-up message asking the user to input a valid numeral number. The "result area" shows a valid integer number when possible, and if there are decimal placed needed, these are limited to 4 decimals.
+![first](assets/pic/first.png)
+
+- After selecting the unit system, the box expands to show drop-down boxes to select a he unit to convert from and a unit to convert to, as well as an input field to enter a decimal value. Below this field is a convert button, to start the conversion process.
+![second](assets/pic/second.png)
+
+- Next a second box appears below showing the conversion result for one unit and the converted value with one decimal place. An invalid entry in the "enter value" field will display a pop-up message asking the user to input a valid decimal number. 
+
+- Also a drop-down box is placed beneath with instructions asking the user to select the desired decimal places for the result from 1 to 9 and to press the convert button again. The converted value is then shown updated as per the user preference.
+
+![third](assets/pic/third.png)
+
+- All the time, the user has the choice to click on a button called "Toggle Color Scheme" to toggle between a default light color scheme:
+
+![light color scheme](assets/pic/light.png) 
+
+and a dark color scheme:
+
+![dark color scheme](assets/pic/dark.png).
 
 ### Future Features
- - possible future features inlcude online conversion for other units such as for the temperature, volume, area and weight.
+ - possible future features inlcude online conversion for other units such as for volume, area and weight.
 
 ## UX
    
 ### Site Goals
-- the idea is to provide an easy to use, useful online conversion tool for common measure units
+- the idea is to provide an easy to use, useful, fun online conversion tool for common units, giving the user the choice to select the units, the desired decimal places for the result and to toggle between two color schemes
 
 ### User Stories
-- the site and the tool should be easy to navigate and to use, the instructions easy to understand and to follow
+- the site and the tool should be easy to navigate and to use, the instructions easy to understand and to follow, the site fun and interesting to interact with
 
 ## Technologies used
 - [Balsamiq](https://balsamiq.com/) was used to pre-design the layout
@@ -86,11 +100,27 @@ The result is being displayed in the "result area" field. An invalid entry in th
 
 ### Validator Testing
 
+- CSS Testing on [W3C Validation Service](https://jigsaw.w3.org/css-validator/) found no error
+
+![CSS](assets/pic/css.png)
+
+- HTML Testing on [W3C Validation Service](https://jigsaw.w3.org/css-validator/) showed no errors or warning
+
+![HTML](assets/pic/html.png)
+
+- when running the JS File on [JSHint](https://jshint.com/) no major issues were found
+
 ### Browser Testing
 
-### Manual Testing
+### Testing
 
-### Testing User Stories
+- Lighthouse Test for Desktop:
+
+![Desktop](assets/pic/desk.png)
+
+- Lighthouse Test for Mobile:
+
+![Mobile](assets/pic/mob.png)
 
 ### Fixed Bugs
 
@@ -98,12 +128,18 @@ The result is being displayed in the "result area" field. An invalid entry in th
 
 
 ## Deployment
-The steps to deploy are as follows: In the GitHub repository, navigate to the Settings tab From the source section drop-down menu, select the Main Branch. Once the main branch has been selected, the page will automatically refresh with a display to indicate the successful deployment.
+The steps to deploy a website on GitHub pages are:
 
-   The live link can be found here: [Measure Converter](https://mufasa1611.github.io/Project2-Converter)
+- Open the repository and go to the Settings tab
+- Navigate to the Pages tab in the left menu
+- Choose Deploy from a branch and select your branch, which is main in most cases
+- Click save 
+- The link to the deployed website can then be found in the repository on the right menu under Environments
+
+- The link to my live site is here: [Units Converter](https://mufasa1611.github.io/Project2-Converter)
 
 ### Local Depoloyment
-mention Gitpod
+
 
 ## Credits
 
