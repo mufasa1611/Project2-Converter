@@ -202,7 +202,7 @@ const fromUnitSelect = document.getElementById('from-unit'); // The (from unit) 
 const toUnitSelect = document.getElementById('to-unit'); // The (to unit) dropdown select
 const Input = document.getElementById('Input'); // The input field where the user enters the value to be converted
 const Decimal = document.getElementById('decimal');//  field for the decimal 
-const outputContainer = document.getElementById('output-container')
+const outputContainer = document.getElementById('output-container');
 const convertBtn = document.getElementById('convert-btn');
 const decimalPlacesSelect = document.getElementById('decimal-places');
 const colorToggle = document.getElementById('color-toggle');
@@ -245,6 +245,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Define an array for measurement types
     const measureType = [
         { value: 'length', label: 'Length' },
+        { value: 'liquid', label: 'liquid Volume'},
         { value: 'temp', label: 'Temperature' },
     ];
 
