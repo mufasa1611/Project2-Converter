@@ -1,4 +1,4 @@
-
+/*jshint esversion: 6 */
 // Length conversion factors
 const INCHES_TO_FEET = 1 / 12;
 const INCHES_TO_YARDS = 1 / 36;
@@ -247,8 +247,8 @@ const fromUnitGroup = document.getElementById('from-unit-box');  // group elemen
 const toUnitGroup = document.getElementById('to-unit-box');  // group element that contains the (to units) dropdown list
 const fromUnitSelect = document.getElementById('from-unit'); // The (from unit) dropdown select 
 const toUnitSelect = document.getElementById('to-unit'); // The (to unit) dropdown select
-const Input = document.getElementById('Input'); // The input field where the user enters the value to be converted
-const Decimal = document.getElementById('decimal');//  field for the decimal 
+const input = document.getElementById('Input'); // The input field where the user enters the value to be converted
+const decimals = document.getElementById('decimal');//  field for the decimal 
 const outputContainer = document.getElementById('output-container');
 const convertBtn = document.getElementById('convert-btn');
 const decimalPlacesSelect = document.getElementById('decimal-places');
@@ -313,7 +313,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelector('label[for="Input"]').classList.remove('hidden');
         fromUnitGroup.classList.remove('hidden');
         toUnitGroup.classList.remove('hidden');
-        Input.classList.remove('hidden');
+        input.classList.remove('hidden');
         convertBtn.classList.remove('hidden');
         fromUnitSelect.innerHTML = '';
         toUnitSelect.innerHTML = '';
@@ -360,7 +360,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const selectedUnit = unitSelect.value;
         const fromUnit = fromUnitSelect.value;
         const toUnit = toUnitSelect.value;
-        const inputValue = parseFloat(Input.value);
+        const inputValue = parseFloat(input.value);
         const decimalPlaces = parseInt(decimalPlacesSelect.value);
         let convertedValue = inputValue;
 
@@ -396,15 +396,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
         // Display the formula
-        const Info = `1 ${fromUnit} equals ${units.toFixed(6)} ${toUnit}`;
-        document.getElementById('Info').textContent = Info;
+        const info = `1 ${fromUnit} equals ${units.toFixed(6)} ${toUnit}`;
+        document.getElementById('Info').textContent = info;
 
         // Round the converted value based on the selected decimal count
         const decimalCount = Number.isInteger(convertedValue) === false;
         if (decimalCount) {
-            Decimal.textContent = convertedValue.toFixed(decimalPlaces); // Rounded to the selected decimal places
+            decimals.textContent = convertedValue.toFixed(decimalPlaces); // Rounded to the selected decimal places
         } else {
-            Decimal.textContent = convertedValue.toString(); // Display as an integer
+            decimals.textContent = convertedValue.toString(); // Display as an integer
         }
 
         // Event listener for the "Update Decimal" button
@@ -413,14 +413,14 @@ document.addEventListener("DOMContentLoaded", function () {
             const selectedDecimalPlaces = parseInt(decimalPlacesSelect.value);
 
             // Update the result with the selected decimal places
-            Decimal.textContent = convertedValue.toFixed(selectedDecimalPlaces);
+            decimals.textContent = convertedValue.toFixed(selectedDecimalPlaces);
 
         });
     });
 
     // Add Enter key press in the input field
     //https://github.com/mufasa1611/Project2-Converter/blob/main/README.md#credits
-        Input.addEventListener("keyup", function (event) {
+        input.addEventListener("keyup", function (event) {
         if (event.key === "Enter") {
             document.getElementById("convert-btn").click();
         }
