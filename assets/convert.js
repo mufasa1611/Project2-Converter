@@ -245,7 +245,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Define an array for measurement types
     const measureType = [
         { value: 'length', label: 'Length' },
-        { value: 'liquid', label: 'liquid Volume'},
+        { value: 'liquid', label: 'liquid Volume' },
         { value: 'temp', label: 'Temperature' },
     ];
 
@@ -279,7 +279,10 @@ document.addEventListener("DOMContentLoaded", function () {
             case 'length':
                 units = ['Inches', 'Feet', 'Yards', 'Miles', 'Kilometers', 'Meters', 'Centimeters'];
                 break;
-
+            // based of liquid
+            case 'liquid':
+                units = ['Milliliters', 'Liters', 'Gallons', 'Fluid Ounces'];
+                break;
             // based of temp
             case 'temp':
                 units = ['Fahrenheit', 'Celsius', 'Kelvin'];
