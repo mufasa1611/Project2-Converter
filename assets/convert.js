@@ -280,9 +280,19 @@ function applyColorSchemeToContainers(colorScheme) {
 //  execute the document loaded
 document.addEventListener("DOMContentLoaded", function () {
 
-    // hide the elements at start
-    //https://tpiros.dev/blog/hiding-removing-elements-in-dom-using-javascript/
 
+    //https://tpiros.dev/blog/hiding-removing-elements-in-dom-using-javascript/
+    //function to clears the instruction message
+    const unitSelects = [unitSelect, fromUnitSelect, toUnitSelect];
+    unitSelects.forEach(function (select) {
+        select.addEventListener('change', function () {
+            const instruction = select.id === 'unit-sys' ? 'unit-sys-box' : select.id === 'from-unit' ? 'from-unit-box' : 'to-unit-box';
+            document.querySelector(`#${instruction} .instructions`).textContent = '';
+
+        });
+    });
+
+    // hide the elements at start
     fromUnitGroup.classList.add('hidden');
     toUnitGroup.classList.add('hidden');
     Input.classList.add('hidden');
@@ -306,6 +316,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Add an event listener for the unit system selection
     unitSelect.addEventListener('change', function () {
+
+        // Clear the Select Unit System instructions
+        document.querySelector('.instructions').textContent = '';
 
         // show the elements at start
         //https://tpiros.dev/blog/hiding-removing-elements-in-dom-using-javascript/
@@ -420,7 +433,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Add Enter key press in the input field
     //https://github.com/mufasa1611/Project2-Converter/blob/main/README.md#credits
-        input.addEventListener("keyup", function (event) {
+    input.addEventListener("keyup", function (event) {
         if (event.key === "Enter") {
             document.getElementById("convert-btn").click();
         }
