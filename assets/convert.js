@@ -44,6 +44,7 @@ const CENTIMETERS_TO_KILOMETERS = 1 / 100000;
 const CENTIMETERS_TO_METERS = 1 / 100;
 
 // Function for length conversions
+// https://github.com/mufasa1611/Project2-Converter/blob/main/README.md#credits
 function lengthConversion(fromUnit, toUnit, value) {
     switch (fromUnit) {
         case 'Inches':
@@ -370,6 +371,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         // Handle the conversion based of the selected sys
+        // https://github.com/mufasa1611/Project2-Converter/blob/main/README.md#credits
         let units;
         switch (selectedUnit) {
             // Handle the conversion for lenght units.
@@ -417,7 +419,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Add Enter key press in the input field
-    Input.addEventListener("keyup", function (event) {
+    //https://github.com/mufasa1611/Project2-Converter/blob/main/README.md#credits
+        Input.addEventListener("keyup", function (event) {
         if (event.key === "Enter") {
             document.getElementById("convert-btn").click();
         }
