@@ -194,6 +194,55 @@ function temp(fromUnit, toUnit, value) {
     }
     return value;
 }
+
+// Function for liquid volume conversions
+function liquid(fromUnit, toUnit, value) {
+    switch (fromUnit) {
+        case 'Fluid Ounces':
+            if (toUnit === 'Milliliters') {
+                return value * 29.5735;
+            } else if (toUnit === 'Liters') {
+                return value * 0.0295735;
+            } else if (toUnit === 'Gallons') {
+                return value * 0.0078125;
+            }
+            break;
+
+        case 'Milliliters':
+            if (toUnit === 'Fluid Ounces') {
+                return value / 29.5735;
+            } else if (toUnit === 'Liters') {
+                return value * 0.001;
+            } else if (toUnit === 'Gallons') {
+                return value * 0.000264172;
+            }
+            break;
+
+        case 'Liters':
+            if (toUnit === 'Fluid Ounces') {
+                return value / 0.0295735;
+            } else if (toUnit === 'Milliliters') {
+                return value * 1000;
+            } else if (toUnit === 'Gallons') {
+                return value * 0.264172;
+            }
+            break;
+
+        case 'Gallons':
+            if (toUnit === 'Fluid Ounces') {
+                return value / 0.0078125;
+            } else if (toUnit === 'Milliliters') {
+                return value / 0.000264172;
+            } else if (toUnit === 'Liters') {
+                return value / 0.264172;
+            }
+            break;
+
+        default:
+        }
+            return value;
+    }
+    
 //  defined variables
 const unitSelect = document.getElementById('unit-sys'); //   element that contains the unit system dropdown list
 const fromUnitGroup = document.getElementById('from-unit-box');  // group element that contains the (from units) dropdown list
