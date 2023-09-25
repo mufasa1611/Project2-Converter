@@ -190,7 +190,6 @@ function temp(fromUnit, toUnit, value) {
                 return value + 273.15;
             }
             break;
-        default:
     }
     return value;
 }
@@ -237,12 +236,10 @@ function liquid(fromUnit, toUnit, value) {
                 return value / 0.264172;
             }
             break;
-
-        default:
-        }
-            return value;
     }
-    
+    return value;
+}
+
 //  defined variables
 const unitSelect = document.getElementById('unit-sys'); //   element that contains the unit system dropdown list
 const fromUnitGroup = document.getElementById('from-unit-box');  // group element that contains the (from units) dropdown list
@@ -372,17 +369,23 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
+        // Handle the conversion based of the selected sys
         let units;
-
         switch (selectedUnit) {
+            // Handle the conversion for lenght units.
             case 'length':
                 units = lengthConversion(fromUnit, toUnit, 1);
                 convertedValue = lengthConversion(fromUnit, toUnit, inputValue);
                 break;
-
+            // Handle the conversion for temp units.
             case 'temp':
                 units = temp(fromUnit, toUnit, 1);
                 convertedValue = temp(fromUnit, toUnit, inputValue);
+                break;
+            // Handle the conversion for liquid units.
+            case 'liquid':
+                units = liquid(fromUnit, toUnit, 1);
+                convertedValue = liquid(fromUnit, toUnit, inputValue);
                 break;
         }
 
