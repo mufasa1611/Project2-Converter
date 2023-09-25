@@ -201,7 +201,7 @@ const toUnitGroup = document.getElementById('to-unit-box');  // group element th
 const fromUnitSelect = document.getElementById('from-unit'); // The (from unit) dropdown select 
 const toUnitSelect = document.getElementById('to-unit'); // The (to unit) dropdown select
 const Input = document.getElementById('Input'); // The input field where the user enters the value to be converted
-const Decimal =  document.getElementById('decimal');//  field for the decimal 
+const Decimal = document.getElementById('decimal');//  field for the decimal 
 const outputContainer = document.getElementById('output-container')
 const convertBtn = document.getElementById('convert-btn');
 const decimalPlacesSelect = document.getElementById('decimal-places');
@@ -345,6 +345,16 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             Decimal.textContent = convertedValue.toString(); // Display as an integer
         }
+        
+        // Event listener for the "Update Decimal" button
+        const updateDecimalButton = document.getElementById('update-button');
+        updateDecimalButton.addEventListener('click', function () {
+            const selectedDecimalPlaces = parseInt(decimalPlacesSelect.value);
+
+            // Update the result with the selected decimal places
+            Decimal.textContent = convertedValue.toFixed(selectedDecimalPlaces);
+
+        });
     });
 
     // Add Enter key press in the input field
