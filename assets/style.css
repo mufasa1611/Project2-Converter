@@ -139,7 +139,8 @@ h4 {
   padding: 10px 20px;
   border-radius: 5px;
   transition: background-color 0.3s ease-in-out;
-  /* https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow */
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow,
+  see credits in readme */
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.7);
 
 }
@@ -151,7 +152,8 @@ h4 {
 }
 
 /*Dark and light body control */
-/* https://lukelowrey.com/css-variable-theme-switcher/ */
+/* https://lukelowrey.com/css-variable-theme-switcher, 
+see credits in readme/ */
 [data-color-scheme="dark"] {
 
   color: rgb(243, 7, 7);

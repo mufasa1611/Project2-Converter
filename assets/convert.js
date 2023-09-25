@@ -44,7 +44,7 @@ const CENTIMETERS_TO_KILOMETERS = 1 / 100000;
 const CENTIMETERS_TO_METERS = 1 / 100;
 
 // Function for length conversions
-// https://github.com/mufasa1611/Project2-Converter/blob/main/README.md#credits
+// see credits in readme.md
 function lengthConversion(fromUnit, toUnit, value) {
     switch (fromUnit) {
         case 'Inches':
@@ -281,8 +281,8 @@ function applyColorSchemeToContainers(colorScheme) {
 document.addEventListener("DOMContentLoaded", function () {
 
 
-    //https://tpiros.dev/blog/hiding-removing-elements-in-dom-using-javascript/
-    //function to clears the instruction message
+    //https://tpiros.dev/blog/hiding-removing-elements-in-dom-using-javascript/,
+    //function to clear the instruction message, see credits in the readme.md
     const unitSelects = [unitSelect, fromUnitSelect, toUnitSelect];
     unitSelects.forEach(function (select) {
         select.addEventListener('change', function () {
@@ -384,7 +384,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         // Handle the conversion based of the selected sys
-        // https://github.com/mufasa1611/Project2-Converter/blob/main/README.md#credits
+        // see credits in the README.md
         let units;
         switch (selectedUnit) {
             // Handle the conversion for lenght units.
@@ -432,7 +432,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Add Enter key press in the input field
-    //https://github.com/mufasa1611/Project2-Converter/blob/main/README.md#credits
+    // see credits in the README.md
     input.addEventListener("keyup", function (event) {
         if (event.key === "Enter") {
             document.getElementById("convert-btn").click();
