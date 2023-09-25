@@ -31,7 +31,7 @@
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 1);
   background-color: #f8f8f8;
-  color:#000000;
+  color: #000000;
   font-family: "RobotoSerif_UltraC", "RobotoSerif_Thin", sans-serif;
 }
 
@@ -45,8 +45,8 @@
   padding: 10px;
   border: 1px solid #f00909;
   border-radius: 3px;
- 
- }
+
+}
 
 label {
   display: block;
@@ -63,7 +63,7 @@ label {
   padding: 10px;
   background-color: #007bff;
   color: #fff;
-  border:#161616;
+  border: #161616;
   border-radius: 5px;
   transition: background-color 0.3s ease-in-out;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.8);
@@ -96,11 +96,12 @@ h4 {
   color: #2133ff;
   margin-top: 0;
 }
+
 #decimal {
   text-align: center;
-  font-size: 24px;
+  font-size: 32px;
   color: #2133ff;
-  margin-top: 0;
+  margin-top: 5px;
 }
 
 /*classes for hiding and showing elements */
@@ -113,17 +114,17 @@ h4 {
 }
 
 /*user instructions guide */
-.instructions{
+.instructions {
   text-align: center;
-  color:#dd0000;
+  color: #dd0000;
   font-size: 12px;
-} 
+}
 
 /*id for output formula */
 #Info {
   font-weight: 200;
   text-align: center;
-  color:#2c7bfb;
+  color: #2c7bfb;
   font-size: 14px;
 }
 
@@ -134,25 +135,25 @@ h4 {
   transform: translateX(-50%);
   background-color: #0074d9;
   color: #ffffff;
-  border:rgb(6, 14, 8);
+  border: rgb(6, 14, 8);
   padding: 10px 20px;
   border-radius: 5px;
   transition: background-color 0.3s ease-in-out;
-    /* https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow */
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow */
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.7);
 
 }
 
 #color-toggle:hover {
   /* https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow */
-  background-color: #fa3a00; 
+  background-color: #fa3a00;
   box-shadow: 0px 3px 6px rgba(240, 234, 234, 0.7);
 }
 
 /*Dark and light body control */
 /* https://lukelowrey.com/css-variable-theme-switcher/ */
 [data-color-scheme="dark"] {
-    
+
   color: rgb(243, 7, 7);
   background-color: rgb(56, 56, 56);
 }
@@ -174,19 +175,20 @@ h4 {
   background-color: rgb(235, 231, 255);
 }
 
-#update-button{
+#update-button {
   text-align: center;
   font-size: 12px;
   background-color: #0074d9;
-    color: #ffffff;
-    border:rgb(6, 14, 8);
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease-in-out;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.7); 
+  color: #ffffff;
+  border: rgb(6, 14, 8);
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.7);
   margin-top: 5px;
 }
+
 #update-button:hover {
-  background-color: #fa3a00; 
+  background-color: #fa3a00;
   box-shadow: 0px 3px 6px rgba(240, 234, 234, 0.7);
 }

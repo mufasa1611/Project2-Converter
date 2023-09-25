@@ -234,6 +234,8 @@ function applyColorSchemeToContainers(colorScheme) {
 document.addEventListener("DOMContentLoaded", function () {
 
     // hide the elements at start
+    //https://tpiros.dev/blog/hiding-removing-elements-in-dom-using-javascript/
+
     fromUnitGroup.classList.add('hidden');
     toUnitGroup.classList.add('hidden');
     Input.classList.add('hidden');
@@ -258,6 +260,8 @@ document.addEventListener("DOMContentLoaded", function () {
     unitSelect.addEventListener('change', function () {
 
         // show the elements at start
+        //https://tpiros.dev/blog/hiding-removing-elements-in-dom-using-javascript/
+
         document.querySelector('label[for="Input"]').classList.remove('hidden');
         fromUnitGroup.classList.remove('hidden');
         toUnitGroup.classList.remove('hidden');
@@ -265,7 +269,6 @@ document.addEventListener("DOMContentLoaded", function () {
         convertBtn.classList.remove('hidden');
         fromUnitSelect.innerHTML = '';
         toUnitSelect.innerHTML = '';
-
         const selectedUnit = unitSelect.value;
 
         //Define units based on the selected unit system
@@ -345,7 +348,7 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             Decimal.textContent = convertedValue.toString(); // Display as an integer
         }
-        
+
         // Event listener for the "Update Decimal" button
         const updateDecimalButton = document.getElementById('update-button');
         updateDecimalButton.addEventListener('click', function () {
