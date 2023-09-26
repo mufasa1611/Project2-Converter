@@ -295,7 +295,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // hide the elements at start
     fromUnitGroup.classList.add('hidden');
     toUnitGroup.classList.add('hidden');
-    Input.classList.add('hidden');
+    input.classList.add('hidden');
     convertBtn.classList.add('hidden');
 
 

@@ -11,11 +11,11 @@ You can find the live website [here](https://mufasa1611.github.io/Project2-Conve
 
 - [Design](#design)
    - [Wireframes](#wireframes)
-   - [Font and Colours](#font-and-colours)
+   - [Font and Colours](#fonts-and-colours)
 
 - [Features](#features)
     - [Existing Features](#existing-features)
-    - [Future Features](#possible-future-features)
+    - [Future Features](#future-features)
 
 - [UX](#ux)
     - [Site Goals](#site-goals)
@@ -37,7 +37,7 @@ You can find the live website [here](https://mufasa1611.github.io/Project2-Conve
 
 ### Wireframes
 
-for Desktop and Mobile:
+for desktop and mobile:
 ![Desktop](assets/pic/Converter-Desk.png) 
 
 ![](assets/pic/Converter-Mobile.png)
@@ -52,12 +52,14 @@ for Desktop and Mobile:
 
 ### Existing Features
 
-- When entering the site, the user sees a blue button on top of the page called "Toggle Color Scheme" giving the user the choice to toggle between a default light color scheme. The button changes color when the mouse hovers over it.
+- When entering the site, the user sees a blue button on top of the page called "Toggle Color Scheme" giving the user the choice to toggle between a default light color scheme and a dark/green color scheme. The button changes color when the mouse hovers over it.
 
+![Color toggle button](assets/pic/color.toggle.png)
+
+light color scheme:
 ![light color scheme](assets/pic/light.png) 
 
-and a dark/green color scheme:
-
+dark/green color scheme:
 ![dark color scheme](assets/pic/dark2.png).
 
 - Under the color toggle button is a box titled "Units Converter Tool", featuring a drop down box from which the user is asked to select a unit system. Once the user selects a unit system, the instructions under the box disappear.
@@ -68,11 +70,11 @@ and a dark/green color scheme:
 
 ![second](assets/pic/second2.png)
 
-- After pressing the convert button, a second box appears below showing the conversion result for one unit and the converted value with one decimal place. An invalid entry in the "enter value" field will display a pop-up message asking the user to input a valid decimal number. If a valid decimal number is entered,the instructions below disappear.
+- After pressing the convert button, a second box appears below showing the conversion result for one unit and the converted value with one decimal place. An invalid entry in the "enter value" field will display a pop-up message asking the user to input a valid decimal number. If a valid decimal number is entered,the instructions below the box disappear.
 
 ![invalid.popup](assets/pic/invalid.popup.png)
 
-- When converting a valid decimal number, a drop-down box appears below with instructions below, asking the user to select the desired decimal places for the result from 1 to 9 and to press the "update decimal" button. The converted value is then shown updated as per the user preference. This button as well changes its color when the mouse hovers over it.
+- When converting a valid decimal number, a drop-down box appears beneath with instructions below, asking the user to select the desired decimal places for the result from 1 to 9 decimal places and to press the "update decimal" button. The converted value is then shown updated as per the user preference. This button as well changes its color when the mouse hovers over it.
 
 ![third](assets/pic/third2.png)
 
@@ -119,15 +121,15 @@ and a dark/green color scheme:
 
 ### Testing
 
-- I tested playing this game in different browser: Chrome, Firefox,Safari
+- I tested playing this game in different browser: Chrome, Firefox,Safari.
 
 - I confirmed that the conversion results are correct.
 
 - I confirmed that the instructions, options, results and text are all readable and easy to understand.
  
-- I confirmed that the colors and fonts chosen are easy to read and accessible by running it through lighthouse in devtools
+- I confirmed that the colors and fonts chosen are easy to read and accessible by running it through lighthouse in devtools.
 
-- I confirmed that this project is responsive, looks good and functions on all standard screen sizes using the devtools device toolbar
+- I confirmed that this project is responsive, looks good and functions on all standard screen sizes using the devtools device toolbar.
 
 - Lighthouse Test report for desktop:
 
@@ -141,7 +143,7 @@ and a dark/green color scheme:
 When first running the W3C validation Service, 
 
 - a stray div end tag was found
-- an id was used twice in the html file
+- a duplicate id was found the html file
 
 These errors were corrected.
 
@@ -154,7 +156,7 @@ The steps to deploy a website on GitHub pages are:
 - Click save 
 - The link to the deployed website can then be found in the repository on the right menu under Environments
 
-- The link to my live site is here: [Units Converter](https://mufasa1611.github.io/Project2-Converter)
+- The link to my live site is here: [https://mufasa1611.github.io/Project2-Converter/](https://mufasa1611.github.io/Project2-Converter)
 
 ## Credits
 
@@ -181,11 +183,11 @@ CSS references:
 
 ## Acknowledgements
 
-Big Thanks to:
+**Big Thanks to:**
 
 - My Mentor [Jack Wachira](https://code-institute-room.slack.com/team/U01GBLV8S9L) for his help, advice and input throughout this project and for his extra time. 
 
-- My facilitator [Kay Ci](https://code-institute-room.slack.com/team/U056NU8DZEW) for her continous support and for guidance providing detailed links to the information I needed
+- My Facilitator [Kay Ci](https://code-institute-room.slack.com/team/U056NU8DZEW) for her continous support and for guidance to the information I needed.
 
 
 
