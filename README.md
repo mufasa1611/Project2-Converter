@@ -54,9 +54,10 @@ for desktop and mobile:
 
 - When entering the site, the user sees a blue button on top of the page called "Toggle Color Scheme" giving the user the choice to toggle between a default light color scheme and a dark/green color scheme. The button changes color when the mouse hovers over it.
 
-![Color toggle button](assets/pic/color.toggle.png)
+    ![Color toggle button](assets/pic/color.toggle.png)
 
-light color scheme:
+light color scheme:  
+
 ![light color scheme](assets/pic/light.png) 
 
 dark/green color scheme:
